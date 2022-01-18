@@ -1,10 +1,17 @@
 import React from 'react'
 import Head from 'next/head'
 
-const Header = () => {
+const defaults = {
+  title: 'Watsize Pages',
+}
+
+const Header = (props = defaults) => {
+  const {
+    title
+  } = props
   return (
     <Head>
-      <title>Watsize Pages</title>
+      <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
   )

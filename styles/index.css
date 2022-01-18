@@ -1,3 +1,12 @@
+:root {
+  --primary: #0d2d56;
+  --secondary: #47668f;
+  --darkgrey: #232C38;
+  --lightgrey: #5A718F;
+  --darkborder: #01102499;
+  --white: #f9f9f9;
+}
+
 html,
 body {
   padding: 0;
@@ -16,12 +25,6 @@ a {
   text-decoration: none;
 }
 
-/* .container {
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-} */
-
 main {
   min-height: 100vh;
   padding: 3rem 0;
@@ -35,15 +38,36 @@ main {
 footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
+  color: var(--white);
+  background-color: var(--darkgrey);
+  border-top: 1px solid var(--darkborder);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
 }
 
-footer a {
+button {
+  text-transform: uppercase;
+}
+
+.flexJustifyCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flexJustifySpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.noInteraction {
+  cursor: pointer;
+  pointer-events: none;
 }

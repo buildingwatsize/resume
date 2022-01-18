@@ -1,19 +1,15 @@
-import Header from '../components/Layout/Header'
-import MainLayout from '../components/Layout/MainLayout'
-import Footer from '../components/Layout/Footer'
+import MainLayout from 'components/Layout/MainLayout'
+import Splashscreen from 'components/Splashscreen/Splashscreen'
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <MainLayout>
-        Test
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </MainLayout>
-      <Footer />
-    </div>
+    <MainLayout className='bg-primary text-white'>
+      <Splashscreen active={false} />
+      Test
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+    </MainLayout>
   )
 }
 

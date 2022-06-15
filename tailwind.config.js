@@ -1,22 +1,44 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    {
+      pattern: /basis-\d{1,2}\/\d{1,2}/,
+      variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+    },
+    {
+      pattern: /basis-full/,
+      variants: ['sm', 'md', 'lg', 'xl', '2xl'],
+    },
+  ],
   theme: {
     extend: {},
     colors: {
-      "primary": "#0d2d56",
-      "secondary": "#47668f",
-      "darkgrey": "#232C38",
-      "lightgrey": "#5A718F",
-      "darkborder": "#011024",
-      "white": "#f9f9f9",
+      ...colors,
+      "currentColor": "currentColor",
+      "transparent": "transparent",
+      "primary": "#001634",
+      "secondary": "#B4C6DD",
+      "danger": "#FA5C6C",
+      "success": "#4DA167",
+      "dark-blue": "#001634",
+      "bold-blue": "#0E2D56",
+      "medium-blue": "#274A78",
+      "light-blue": "#4B6D9A",
+      "lighter-blue": "#7A96BB",
+      "lightest-blue": "#B4C6DD",
+      "white": "#F9FCFF",
     },
-    // fontFamily: {
-    //   sans: ['Graphik', 'sans-serif'],
-    //   serif: ['Merriweather', 'serif'],
-    // },
+    fontFamily: {
+      sans: ['Noto Sans', 'Noto Sans Thai', 'sans-serif'],
+      //   serif: ['Merriweather', 'serif'],
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }

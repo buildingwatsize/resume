@@ -1,14 +1,12 @@
 import MainLayout from 'components/Layout/MainLayout'
+import PageTitle from 'components/Layout/PageTitle'
 import Splashscreen from 'components/Splashscreen/Splashscreen'
 
 const Home = () => {
   return (
-    <MainLayout className='bg-primary text-white'>
+    <MainLayout>
       <Splashscreen active={false} />
-      Test
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <PageTitle title={"Home"} subtitle={"หน้าแรก"} />
     </MainLayout>
   )
 }

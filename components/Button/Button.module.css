@@ -1,0 +1,68 @@
+@value --transition-base: transform 600ms cubic-bezier(.3, .7, .4, 1);
+@value --transition-hover: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+@value --transition-active: transform 30ms;
+
+.btnPushable {
+  @apply uppercase relative bg-transparent rounded-xl border-0 p-0 cursor-pointer outline-offset-4 select-none;
+  transition: filter 250ms;
+}
+
+.btnShadow {
+  @apply absolute top-0 left-0 w-full h-full rounded-xl;
+  @apply bg-bold-blue will-change-transform translate-y-0.5;
+  transition: --transition-base;
+}
+
+.btnEdge {
+  @apply absolute top-0 left-0 w-full h-full rounded-xl;
+  background: linear-gradient(
+    to left,
+    theme("colors.bold-blue") 0%,
+    theme("colors.medium-blue") 8%,
+    theme("colors.medium-blue") 92%,
+    theme("colors.bold-blue") 100%
+  );
+}
+
+.btnFrontPanel {
+  @apply block relative bg-light-blue rounded-xl px-8 py-3 text-base font-bold text-white -translate-y-1 will-change-transform;
+  transition: --transition-base;
+}
+
+.btnFrontPanelSecondary {
+  @apply block relative bg-light-blue rounded-xl px-8 py-3 text-base font-bold text-white/60 -translate-y-1 will-change-transform;
+  transition: --transition-base;
+}
+
+.btnPushable:hover {
+  @apply brightness-110;
+}
+
+.btnPushable:hover .btnFrontPanel {
+  @apply -translate-y-1.5 text-white;
+  transition: --transition-hover;
+}
+.btnPushable:hover .btnFrontPanelSecondary {
+  @apply -translate-y-1.5 text-white/60;
+  transition: --transition-hover;
+}
+
+.btnPushable:active .btnFrontPanel,
+.btnPushable:active .btnFrontPanelSecondary {
+  @apply -translate-y-0.5;
+  transition: --transition-active;
+}
+
+.btnPushable:hover .btnShadow {
+  @apply translate-y-1;
+  transition: --transition-hover;
+}
+
+.btnPushable:active .btnShadow {
+  transform: translateY(1px);
+  transition: --transition-active;
+}
+
+.btnPushable:focus:not(:focus-visible) {
+  @apply outline-none;
+}

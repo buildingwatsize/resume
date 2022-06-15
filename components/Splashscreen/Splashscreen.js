@@ -1,6 +1,5 @@
-import React from 'react'
-import Loading from 'components/Loading/Loading'
 import * as catSlider from 'assets/loading/cat_slider.json'
+import Loading from 'components/Loading/Loading'
 
 const Splashscreen = ({ active = true }) => {
   if (!active) return <></>

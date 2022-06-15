@@ -1,8 +1,5 @@
-import React from 'react'
-import Lottie from 'react-lottie'
+import Lottie from 'react-lottie';
 import { ClassCombiner } from 'utils';
-
-import styles from './Loading.module.css'
 
 const defaultOptions = {
   loop: true,
@@ -18,18 +15,19 @@ const getOptions = (json = '') => {
   }
 }
 
-const Loading = ({ json, width, height, text, minWidth = "300px", fullscreen = false, className = '', style = {} }) => {
+const Loading = ({ json, width, height = "auto", text = "", minWidth = "300px", maxWidth = "600px", fullscreen = false, className = 'bg-primary text-white', style = {} }) => {
+  const fullscreenModeCss = `${fullscreen ? "min-h-screen" : ""}`
   return (
-    <div className={ClassCombiner(["flexJustifyCenter flexColumn", `${fullscreen ? styles.loading : ""}`, className])} style={{ ...style }}>
+    <div className={ClassCombiner("flex-auto flex-col flexJustifyCenter", fullscreenModeCss, className)} style={{ ...style }}>
       <div className="noInteraction">
         <Lottie
           options={getOptions(json)}
           width={width}
           height={height}
-          style={{ minWidth: minWidth }}
+          style={{ minWidth: minWidth, maxWidth: maxWidth }}
         />
       </div>
-      <div className={styles.loadingText}>{text}</div>
+      {text && <div className='text-white text-2xl'>{text}</div>}
     </div >
   )
 }

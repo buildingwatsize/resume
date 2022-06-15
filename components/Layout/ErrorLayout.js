@@ -1,14 +1,12 @@
-import React from 'react'
 
-import Header from 'components/Layout/Header'
 import Footer from 'components/Layout/Footer'
-import Navbar from 'components/Layout/Navbar'
+import Header from 'components/Layout/Header'
+import { ClassCombiner } from 'utils/'
 
-const ErrorLayout = ({ children }) => {
+const ErrorLayout = ({ children, className, ...rest }) => {
   return (
-    <div>
+    <div className={ClassCombiner("h-screen flex flex-col", className)} {...rest}>
       <Header />
-      <Navbar />
       {children}
       <Footer />
     </div>

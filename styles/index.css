@@ -1,19 +1,23 @@
+/* Palette for vscode extension */
+/* Thanks: https://palettte.app/ */
+/* See more: https://coolors.co/001634-0e2d56-274a78-4b6d9a-7a96bb-fa5c6c-4da167 */
 :root {
-  --primary: #0d2d56;
-  --secondary: #47668f;
-  --darkgrey: #232C38;
-  --lightgrey: #5A718F;
-  --darkborder: #01102499;
-  --white: #f9f9f9;
+  --transparent: transparent;
+  --danger: #fa5c6c;
+  --success: #4da167;
+  --dark-blue: #001634;
+  --bold-blue: #0e2d56;
+  --medium-blue: #274a78;
+  --light-blue: #4b6d9a;
+  --lighter-blue: #7a96bb;
+  --lightest-blue: #b4c6dd;
+  --white: #f9fcff;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
 }
 
 * {
@@ -25,49 +29,36 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: revert;
+}
+
+nav {
+  @apply z-50 bg-bold-blue text-white px-2 py-2.5 sm:px-4;
+  box-shadow: 0px 3px 6px 0px theme("colors.dark-blue");
+}
+
 main {
-  min-height: 100vh;
-  padding: 3rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @apply p-4;
 }
 
 footer {
-  width: 100%;
-  height: 100px;
-  color: var(--white);
-  background-color: var(--darkgrey);
-  border-top: 1px solid var(--darkborder);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-
-button {
-  text-transform: uppercase;
+  @apply gap-1 flexJustifyCenter bg-bold-blue text-white h-24 w-full border-t border-t-dark-blue;
+  box-shadow: 0px -3px 6px 0px theme("colors.dark-blue");
 }
 
 .flexJustifyCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply flex justify-center items-center;
 }
 
 .flexJustifySpaceBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flexColumn {
-  flex-direction: column;
+  @apply flex justify-between items-center;
 }
 
 .noInteraction {
-  cursor: pointer;
-  pointer-events: none;
+  @apply cursor-pointer pointer-events-none;
 }

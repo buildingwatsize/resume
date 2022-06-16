@@ -15,7 +15,7 @@ const PageTitle = ({ title, subtitle, action, allowBack, onClickBack, className,
         </div>}
         <div className="flex-col">
           <div>{title}</div>
-          <div className="text-xl font-normal">{subtitle}</div>
+          <div className="text-xl font-normal text-white/80">{subtitle}</div>
         </div>
       </div>
       {action && <div className='w-full text-right'>

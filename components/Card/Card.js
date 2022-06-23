@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ClassCombiner } from 'utils';
 
 import Badge from 'components/Button/Badge';
-import Tooltip from 'components/Tooltip/Tooltip';
+import ClickTooltip from 'components/Tooltips/ClickTooltips';
 
 const Card = ({ badge, tooltip, children, className, ...rest }) => {
   return (
@@ -13,7 +13,7 @@ const Card = ({ badge, tooltip, children, className, ...rest }) => {
     >
       {badge ? <Badge text={badge} className='select-none absolute top-4 left-4' /> : null}
       {
-        !_.isEmpty(tooltip) ? <Tooltip className='absolute top-0 right-0'>
+        !_.isEmpty(tooltip) ? <ClickTooltip className='absolute top-0 right-0'>
           <div className='font-bold text-lg'>
             {tooltip?.name}
           </div>
@@ -23,7 +23,7 @@ const Card = ({ badge, tooltip, children, className, ...rest }) => {
           <div className='pt-1'>
             {tooltip?.description}
           </div>
-        </Tooltip>
+        </ClickTooltip>
           : null
       }
       <div className='mt-8 mb-2'>

@@ -4,7 +4,7 @@ import { ClassCombiner } from 'utils/';
 
 import MiniIcon from 'components/Button/MiniIcon';
 
-const Tooltip = ({ children, className, ...rest }) => {
+const ClickTooltips = ({ children, className, ...rest }) => {
   const [isShow, setIsShow] = useState(false)
   const btnRef = useRef()
 
@@ -39,14 +39,14 @@ const Tooltip = ({ children, className, ...rest }) => {
   )
 }
 
-Tooltip.defaultProps = {
+ClickTooltips.defaultProps = {
   children: null,
   className: "",
 }
 
-Tooltip.propTypes = {
+ClickTooltips.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
 }
 
-export default Tooltip
+export default ClickTooltips

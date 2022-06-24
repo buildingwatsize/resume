@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 const HoverTooltips = ({ children, text }) => {
   return (
-    <div className='relative flex flex-col items-center group'>
+    <div className='relative flex flex-col items-center justify-center group'>
       <div className='group-hover:text-white'>{children}</div>
       <div className="hidden absolute bottom-0 flex-col items-center mb-7 w-max group-hover:flex group-hover:text-white">
         <span className="relative z-10 p-2 text-xs leading-none whitespace-no-wrap bg-medium-blue shadow-lg rounded-md">{text}</span>

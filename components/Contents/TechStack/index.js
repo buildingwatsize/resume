@@ -41,6 +41,7 @@ import IconVSCode from 'assets/icons/vscode'
 import IconVueJS from 'assets/icons/vuejs'
 import IconVuetify from 'assets/icons/vuetify'
 import IconWebpack from 'assets/icons/webpack'
+import TopicLayout from "components/Layout/TopicLayout"
 
 const techList = [
   {
@@ -124,18 +125,13 @@ const techList = [
 
 const TechStack = () => {
   return (
-    <div id="tech-stack" className='mb-4 pb-4'>
-      <span className="before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-danger relative inline-block mb-4">
-        <span className="relative text-xl font-bold text-white">As Full-stack, I'm using... - ฉันใช้อะไรบ้าง</span>
-      </span>
-      <div className="text-md font-normal text-white/80 my-2 flex flex-wrap">
-        {
-          techList.map(el => (
-            <BoxStack key={el.title} title={el.title} list={el.list} />
-          ))
-        }
-      </div>
-    </div>
+    <TopicLayout id="tech-stack" title="As Full-stack, I'm using... - ฉันใช้อะไรบ้าง">
+      {
+        techList.map(el => (
+          <BoxStack key={el.title} title={el.title} list={el.list} />
+        ))
+      }
+    </TopicLayout>
   )
 }
 

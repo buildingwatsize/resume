@@ -26,7 +26,7 @@ const Timeline = ({ list }) => {
     '>
       {list.map(l => {
         return (
-          <div className="relative clear-both text-left">
+          <div key={l.key} className="relative clear-both text-left">
             <div className='
         mb-2
         float-left
@@ -71,6 +71,7 @@ const Timeline = ({ list }) => {
 
 Timeline.propTypes = {
   list: PropTypes.arrayOf(PropTypes.shape({
+    key: PropTypes.string,
     time: PropTypes.string,
     position: PropTypes.string,
     location: PropTypes.string,

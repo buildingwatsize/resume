@@ -5,9 +5,7 @@ import TopicLayout from 'components/Layout/TopicLayout';
 
 import BAACImage from 'assets/img/work-experiences/baac.png';
 import INETImage from 'assets/img/work-experiences/inet.png';
-import KMUTNBImage from 'assets/img/work-experiences/kmutnb.png';
 import OpenLandscapeImage from 'assets/img/work-experiences/ols.png';
-import POSNImage from 'assets/img/work-experiences/posn.svg';
 
 const findDiffYearAndMonth = (targetDate, baseDate = dayjs()) => {
   if (targetDate) {
@@ -25,12 +23,13 @@ const WorkingExperience = () => {
   const [allWorkYear, allWorkMonth] = findDiffYearAndMonth(START_WORKING_DATE)
   return (
     <TopicLayout id='working-experience' title='Work Experiences - ประสบการณ์การทำงาน'>
-      <div className='flex flex-col'>
-        <div className='text-left mb-4 text-md'>
+      <div className='flex flex-col m-auto'>
+        <div className='text-right mb-4 text-md'>
           <span>All Work Experiences: </span><strong>{`${allWorkYear} Years ${allWorkMonth} Month`}</strong>
         </div>
         <Timeline list={[
           {
+            key: "1",
             time: "May 2019 - Present",
             position: "Software Developer",
             location: "BAAC",
@@ -55,6 +54,7 @@ const WorkingExperience = () => {
             </div>,
           },
           {
+            key: "2",
             time: "Aug 2018 - May 2019",
             position: "Software Engineer",
             location: "OpenLandscape Co., Ltd.",
@@ -75,6 +75,7 @@ const WorkingExperience = () => {
             </div>,
           },
           {
+            key: "3",
             time: "Aug 2017 - Aug 2018",
             position: "Software Engineer",
             location: "Internet Thailand Public Co., Ltd.",
@@ -92,45 +93,6 @@ const WorkingExperience = () => {
               <div>- Backend: Python</div>
               <div>- Frontend: JavaScript (VueJS + Vuetify)</div>
               <div>- Tools: Docker, Docker-compose, etc.</div>
-            </div>,
-          },
-          {
-            time: "Dec 2013 - Feb 2017",
-            position: "Computer Engineering",
-            location: "KMUTNB",
-            image: KMUTNBImage,
-            description: <div>
-              <div className='text-white font-bold pb-2'>
-                <div>Bachelor's Degree of Engineering (Computer Engineering)</div>
-                <div>King Mongkut's University of Technology North Bangkok (KMUTNB)</div>
-              </div>
-
-              <div>- Learning fundamental of Programming (C, Python, HTML, JavaScript)</div>
-              <div>- Learning fundamental of Embedded Hardware (Arduino, Raspberry Pi and FPGA)</div>
-
-              <div className='mt-4 text-white font-bold'>Internship System Engineer - NEC Corporation (Thailand) Ltd.</div>
-
-              <div className='mt-4 font-bold'>Responsibility:</div>
-              <div>- Design Leaflet & Brochure Infographics for PR</div>
-              <div>- Setup OS and Fix Hardware Problems</div>
-              <div>- Maintainer System</div>
-              <div>- Create a Face Detection Solution</div>
-              <div>- Presentation of Products</div>
-              <div>- Installation Large-display Solution (On-Site)</div>
-            </div>,
-          },
-          {
-            time: "Oct 2012 - Apr 2014",
-            position: "Computer Olympic Camp (POSN)",
-            location: "Naresuan University",
-            image: POSNImage,
-            description: <div>
-              {/* https://www.sci.nu.ac.th/posn_nu/ */}
-              <div className='text-white font-bold pb-2'>
-                <div>Camp#2 of The Promotion of Academic Olympiads and Development of Science Education Foundation (POSN)</div>
-              </div>
-
-              <div>- Learning fundamental of Programming (C/C++ Language)</div>
             </div>,
           },
         ]} />

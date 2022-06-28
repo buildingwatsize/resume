@@ -17,7 +17,7 @@ const operationSkills = [
 ]
 const Skills = () => {
   return (
-    <TopicLayout id="skills" title='Skills - ความถนัด'>
+    <TopicLayout id="skills" title='Skills'>
       <div className='bg-medium-blue/20 rounded-md w-full p-4'>
         <Row>
           <Col span={12} sm={6} className="px-4">

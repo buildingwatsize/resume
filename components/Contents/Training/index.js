@@ -40,7 +40,7 @@ const courseList = [
 ]
 const Training = () => {
   return (
-    <TopicLayout id="training" title='Training - การฝึกฝน'>
+    <TopicLayout id="training" title='Training'>
       <ol className="flex overflow-x-scroll items-start p-4 bg-medium-blue/20 rounded-md px-4 sm:px-8 shadow-md">
         {courseList.map(el => {
           return (

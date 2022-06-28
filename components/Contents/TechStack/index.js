@@ -125,7 +125,7 @@ const techList = [
 
 const TechStack = () => {
   return (
-    <TopicLayout id="tech-stack" title="As Full-stack, I'm using... - ฉันใช้อะไรบ้าง">
+    <TopicLayout id="tech-stack" title="As Full-stack, I'm using...">
       {
         techList.map(el => (
           <BoxStack key={el.title} title={el.title} list={el.list} />

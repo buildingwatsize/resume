@@ -22,7 +22,7 @@ const START_WORKING_DATE = "2017-08-01"
 const WorkingExperience = () => {
   const [allWorkYear, allWorkMonth] = findDiffYearAndMonth(START_WORKING_DATE)
   return (
-    <TopicLayout id='working-experience' title='Work Experiences - ประสบการณ์การทำงาน'>
+    <TopicLayout id='working-experience' title='Work Experiences'>
       <div className='flex flex-col m-auto'>
         <div className='text-right mb-4 text-md'>
           <span>All Work Experiences: </span><strong>{`${allWorkYear} Years ${allWorkMonth} Month`}</strong>

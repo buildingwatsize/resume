@@ -6,7 +6,7 @@ import POSNImage from 'assets/img/education/posn.svg';
 
 const Education = () => {
   return (
-    <TopicLayout id="education" title='Education - การศึกษา'>
+    <TopicLayout id="education" title='Education'>
       <div className='flex flex-col m-auto'>
         <Timeline list={[
           {

@@ -3,6 +3,7 @@ import Attention from 'components/Contents/Attention'
 import Education from 'components/Contents/Education'
 import Skills from 'components/Contents/Skills'
 import TechStack from 'components/Contents/TechStack'
+import Training from 'components/Contents/Training'
 import WorkingExperience from 'components/Contents/WorkingExperience'
 import MainLayout from 'components/Layout/MainLayout'
 import PageTitle from 'components/Layout/PageTitle'
@@ -19,6 +20,7 @@ const Home = () => {
         <AboutMe />
         <TechStack />
         <Skills />
+        <Training />
         <WorkingExperience />
         <Education />
         <Attention />

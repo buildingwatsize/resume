@@ -34,8 +34,6 @@ const Skills = () => {
           })}
         </Col>
       </Row>
-      <div className='flex gap-8 w-full'>
-      </div>
     </TopicLayout>
   )
 }

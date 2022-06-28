@@ -12,6 +12,7 @@ const Timeline = ({ list }) => {
       bg-medium-blue/20
       p-8
       relative
+      rounded-md
       shadow-md
       before:content-[""]
       before:absolute
@@ -35,7 +36,7 @@ const Timeline = ({ list }) => {
         relative
         pr-8
         text-md
-      text-white/70
+      text-white/60
         before:absolute
         before:top-[15%]
         before:-right-2
@@ -59,7 +60,7 @@ const Timeline = ({ list }) => {
                 />
               </div>
             </div>
-            <div className="float-right w-[67%] pl-8 text-white/70 mb-10">
+            <div className="float-right w-[67%] pl-8 text-white/60 mb-10">
               {l.description}
             </div>
           </div>

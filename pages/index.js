@@ -18,8 +18,8 @@ const Home = () => {
       <div className="p-2 mx-6">
         <AboutMe />
         <TechStack />
-        <WorkingExperience />
         <Skills />
+        <WorkingExperience />
         <Education />
         <Attention />
       </div>

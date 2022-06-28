@@ -1,9 +1,16 @@
-import TopicLayout from 'components/Layout/TopicLayout'
+import TopicLayout from 'components/Layout/TopicLayout';
+import Timeline from 'components/Timeline';
+
+import KMUTNBImage from 'assets/img/education/kmutnb.png';
+import POSNImage from 'assets/img/education/posn.svg';
 
 const Education = () => {
   return (
     <TopicLayout id="education" title='Education - การศึกษา'>
-      {/* {
+      <div className='flex flex-col m-auto'>
+        <Timeline list={[
+          {
+            key: "education-1",
             time: "Dec 2013 - Feb 2017",
             position: "Computer Engineering",
             location: "KMUTNB",
@@ -29,6 +36,7 @@ const Education = () => {
             </div>,
           },
           {
+            key: "education-2",
             time: "Oct 2012 - Apr 2014",
             position: "Computer Olympic Camp (POSN)",
             location: "Naresuan University",
@@ -38,9 +46,11 @@ const Education = () => {
                 <div>Camp#2 of The Promotion of Academic Olympiads and Development of Science Education Foundation (POSN)</div>
               </div>
 
-              <div>- Learning fundamental of Programming (C/C++ Language)</div>
+              <div>- Learning fundamental of Programming (C/C++ Language) when studied at high school (Grade 10-11) </div>
             </div>,
-          }, */}
+          },
+        ]} />
+      </div>
     </TopicLayout>
   )
 }

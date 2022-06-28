@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
-import Timeline from 'components/Contents/WorkingExperience/Timeline';
 import TopicLayout from 'components/Layout/TopicLayout';
+import Timeline from 'components/Timeline';
 
 import BAACImage from 'assets/img/work-experiences/baac.png';
 import INETImage from 'assets/img/work-experiences/inet.png';
@@ -29,7 +29,7 @@ const WorkingExperience = () => {
         </div>
         <Timeline list={[
           {
-            key: "1",
+            key: "work-exp-1",
             time: "May 2019 - Present",
             position: "Software Developer",
             location: "BAAC",
@@ -54,7 +54,7 @@ const WorkingExperience = () => {
             </div>,
           },
           {
-            key: "2",
+            key: "work-exp-2",
             time: "Aug 2018 - May 2019",
             position: "Software Engineer",
             location: "OpenLandscape Co., Ltd.",
@@ -75,7 +75,7 @@ const WorkingExperience = () => {
             </div>,
           },
           {
-            key: "3",
+            key: "work-exp-3",
             time: "Aug 2017 - Aug 2018",
             position: "Software Engineer",
             location: "Internet Thailand Public Co., Ltd.",

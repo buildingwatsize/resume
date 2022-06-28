@@ -1,3 +1,5 @@
+import Col from 'components/Flex/Col'
+import Row from 'components/Flex/Row'
 import TopicLayout from 'components/Layout/TopicLayout'
 import LevelProgress from './LevelProgress'
 
@@ -16,21 +18,23 @@ const operationSkills = [
 const Skills = () => {
   return (
     <TopicLayout id="skills" title='Skills - ความถนัด'>
-      <div className='flex gap-8 w-full'>
-        <div className='flex-1 pl-4 pr-4'>
+      <Row className="w-full">
+        <Col span={12} sm={6} className="pl-4 pr-4">
           {codingSkills.map(s => {
             return (
               <LevelProgress key={s.title} title={s.title} level={s.level} />
             )
           })}
-        </div>
-        <div className='flex-1 pl-4 pr-4'>
+        </Col>
+        <Col span={12} sm={6} className="pl-4 pr-4">
           {operationSkills.map(el => {
             return (
               <LevelProgress key={el.title} title={el.title} level={el.level} />
             )
           })}
-        </div>
+        </Col>
+      </Row>
+      <div className='flex gap-8 w-full'>
       </div>
     </TopicLayout>
   )

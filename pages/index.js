@@ -1,6 +1,7 @@
 import AboutMe from 'components/Contents/AboutMe'
 import Attention from 'components/Contents/Attention'
 import Education from 'components/Contents/Education'
+import PublicPackage from "components/Contents/PublicPackage"
 import Skills from 'components/Contents/Skills'
 import TechStack from 'components/Contents/TechStack'
 import Training from 'components/Contents/Training'
@@ -23,6 +24,7 @@ const Home = () => {
         <Training />
         <WorkingExperience />
         <Education />
+        <PublicPackage />
         <Attention />
       </div>
 

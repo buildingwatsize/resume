@@ -1,4 +1,4 @@
-import { ClassCombiner } from "utils/"
+import { ClassCombiner } from "utils"
 
 const Content = ({ children, className, ...rest }) => {
   return (

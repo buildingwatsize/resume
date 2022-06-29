@@ -40,12 +40,22 @@ const Col = ({ sm, md, lg, xl, xxl, span, className, children, ...rest }) => {
 }
 
 Col.defaultProps = {
+  sm: undefined,
+  md: undefined,
+  lg: undefined,
+  xl: undefined,
+  xxl: undefined,
   span: undefined,
   className: "",
   children: null,
 }
 
 Col.propTypes = {
+  sm: PropTypes.number,
+  md: PropTypes.number,
+  lg: PropTypes.number,
+  xl: PropTypes.number,
+  xxl: PropTypes.number,
   span: PropTypes.number,
   className: PropTypes.string,
   children: PropTypes.any,

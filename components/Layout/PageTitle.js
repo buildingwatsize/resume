@@ -1,10 +1,12 @@
+import React from 'react'
+
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
 import IconArrowBackCircle from 'assets/icons/arrow_back_circle'
-import { ClassCombiner } from 'utils/'
+import { ClassCombiner } from 'utils'
 
-const PageTitle = ({ title, subtitle, action, allowBack, onClickBack, className, ...rest }) => {
+const PageTitle = ({ title, subtitle, action, allowBack, onClickBack, className }) => {
   const router = useRouter()
   const handleClickBack = onClickBack ? onClickBack : () => router.back()
   return (

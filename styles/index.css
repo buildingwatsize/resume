@@ -50,6 +50,9 @@ footer {
   @apply gap-1 flexJustifyCenter bg-bold-blue text-white h-24 w-full border-t border-t-dark-blue;
   box-shadow: 0px -3px 6px 0px theme("colors.dark-blue");
 }
+footer svg {
+  @apply fill-bold-blue;
+}
 
 .flexJustifyCenter {
   @apply flex justify-center items-center;

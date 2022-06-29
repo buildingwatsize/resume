@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const BoxStack = ({ title, list }) => {
   return (
-    <div className='m-2 border-2 border-lighter-blue rounded-md w-max flex-grow last:flex-grow-0'>
+    <div className='m-2 bg-medium-blue/20 border-2 border-lighter-blue rounded-md w-max flex-grow last:flex-grow-0'>
       <div className='flex justify-center'>
         <div className='rounded-b-md bg-lighter-blue w-min px-2 text-dark-blue font-bold whitespace-nowrap'>{title}</div>
       </div>

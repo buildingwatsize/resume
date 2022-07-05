@@ -28,7 +28,7 @@ const GamesID = () => {
   }, [])
 
   return (
-    <MainLayout>
+    <MainLayout bgMinimal>
       {!_.isEmpty(matched) ?
         <div key={`gamesId-${id}`} className="flex-auto">
           <PageTitle title={`Games / ${matched.title}`} subtitle={matched.description} allowBack />

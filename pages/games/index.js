@@ -14,7 +14,7 @@ const Games = () => {
     router.push(`${router.pathname}/${_id}`)
   }
   return (
-    <MainLayout>
+    <MainLayout bgMinimal>
       <PageTitle title={"Games"} subtitle={"สนุกกับเกมง่ายๆ แค่ปลายนิ้ว"} />
       <Row className={"mx-6"}>
         {GAMES_LIST.map((g) => <Col key={g.id} span={12} sm={6} md={4} xl={3} xxl={2}>

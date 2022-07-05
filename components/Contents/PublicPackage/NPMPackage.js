@@ -23,8 +23,8 @@ const NPMPackage = ({ icon, title, description, link }) => {
     if (link) router.replace(link)
   }
   return (
-    <div className="w-full">
-      <div className="bg-medium-blue/20 cursor-pointer px-8 py-6 rounded-md hover:bg-light-blue/20 flex items-center" onClick={handleClick}>
+    <div className="flex w-full h-full">
+      <div className="bg-medium-blue/20 shadow-md cursor-pointer px-8 py-6 rounded-md hover:bg-light-blue/20 flex items-center" onClick={handleClick}>
         <div className="flex-none w-12 m-4">{icon}</div>
         <div className="flex flex-col justify-center items-stretch">
           <div className="text-white font-bold text-lg">{title}</div>

@@ -72,7 +72,7 @@ const Donate = () => {
 
   const dialogContent = currentMenu?.renderDialog?.(handleClickCancelDialog, handleClickOkDialog) || null
   return (
-    <MainLayout>
+    <MainLayout bgMinimal>
       <PageTitle title={"Donate"} subtitle={"สนับสนุน"} />
       <Row className={"mx-6"}>
         {list.map(l => <Col span={12} sm={6} md={4} key={l.name}>

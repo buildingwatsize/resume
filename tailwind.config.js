@@ -16,7 +16,50 @@ module.exports = {
     },
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        transformA: {
+          "0%": { borderRadius: "33% 67% 70% 30% / 30% 30% 70% 70%" },
+          "20%": { borderRadius: "37% 63% 51% 49% / 37% 65% 35% 63%" },
+          "40%": { borderRadius: "36% 64% 64% 36% / 64% 48% 52% 36%" },
+          "60%": { borderRadius: "37% 63% 51% 49% / 30% 30% 70% 70%" },
+          "80%": { borderRadius: "40% 60% 42% 58% / 41% 51% 49% 59%" },
+          "100%": { borderRadius: "33% 67% 70% 30% / 30% 30% 70% 70%" },
+        },
+        transformB: {
+          "0%": { borderRadius: "33% 67% 70% 30% / 30% 30% 70% 70%" },
+          "20%": { borderRadius: "40% 60% 42% 58% / 41% 51% 49% 59%" },
+          "40%": { borderRadius: "37% 63% 51% 49% / 30% 30% 70% 70%" },
+          "60%": { borderRadius: "33% 67% 70% 30% / 30% 30% 70% 70%" },
+          "80%": { borderRadius: "37% 63% 51% 49% / 37% 65% 35% 63%" },
+          "100%": { borderRadius: "36% 64% 64% 36% / 64% 48% 52% 36%" },
+        },
+        fading: {
+          "0%": { opacity: 0.5 },
+          "15%": { opacity: 0.7 },
+          "40%": { opacity: 1 },
+          "60%": { opacity: 1 },
+          "85%": { opacity: 0.7 },
+          "100%": { opacity: 0.5 },
+        },
+        swayLeftToRight: {
+          "from": { transform: "translate(-100%, 0%)" },
+          "to": { transform: "translate(0%, 100%)" },
+        },
+        swayRightToLeft: {
+          "from": { transform: "translate(100%, 0%)" },
+          "to": { transform: "translate(0%, -100%)" },
+        },
+        floatUp: {
+          "to": { transform: "translateY(-175vh)" },
+        },
+      },
+      animation: {
+        "blobFadingA": "transformA 5s ease-in-out infinite both alternate, fading 6s infinite ease-in-out, swayLeftToRight 20s ease-in-out infinite both alternate",
+        "blobFadingB": "transformB 5s ease-in-out infinite both alternate, fading 6s infinite ease-in-out, swayRightToLeft 20s ease-in-out infinite both alternate",
+        "blobFloatUp": "transformA 5s ease-in-out infinite both alternate, floatUp 5s ease-in infinite",
+      },
+    },
     colors: {
       ...colors,
       "currentColor": "currentColor",

@@ -9,6 +9,8 @@ const Timeline = ({ list }) => {
     <div className='
       w-full
       max-w-3xl
+      xl:w-[64rem]
+      xl:max-w-5xl
       bg-medium-blue/20
       p-8
       relative

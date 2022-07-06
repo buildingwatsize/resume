@@ -54,10 +54,10 @@ const Navbar = () => {
   });
 
   return (
-    <nav>
+    <nav className="mx-10 px-6 rounded-b-md">
       <div className="flex justify-between items-center mx-auto px-2 md:px-0">
         <Link href="/">
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             {IconFingerPrint}
             <span className="text-lg font-bold">WATSIZE</span>
           </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
           <div ref={btnRef}>
             <button
               type="button"
-              className="z-20 relative p-2 text-white rounded-lg focus:outline-none focus:ring-2"
+              className="z-20 relative p-2 text-white rounded-md focus:outline-none focus:ring-2"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? IconX : IconMenu}

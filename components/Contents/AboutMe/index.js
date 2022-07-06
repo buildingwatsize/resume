@@ -27,7 +27,7 @@ const AboutMe = () => {
             <div className="text-sm sm:text-base text-white/60">Full-stack Developer</div>
           </div>
         </div>
-        <div className='sm:flex-1 relative rounded-lg font-normal text-white/80 my-3'>
+        <div className='sm:flex-1 p-2 relative rounded-lg font-normal text-white/80 my-3'>
           <div>👋 I'm <span className='text-white font-bold'>Chinnawat Chimdee</span>, aka <span className='text-white font-bold'>"Watsize"</span>. Who be like a Programmer, a Software Developer, a Software Engineer, a DevOps Engineer, or whatever you want 😄.</div>
           <br />
           <div>I'm currently working for 🏦 <span className='text-white font-bold'>Bank of Agriculture and Agricultural Cooperatives (BAAC)</span> in Bangkok, Thailand 🇹🇭.</div>

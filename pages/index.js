@@ -1,6 +1,6 @@
 import AboutMe from 'components/Contents/AboutMe'
-import Attention from 'components/Contents/Attention'
 import Education from 'components/Contents/Education'
+import Hobbies from 'components/Contents/Hobbies'
 import PublicPackage from "components/Contents/PublicPackage"
 import Skills from 'components/Contents/Skills'
 import TechStack from 'components/Contents/TechStack'
@@ -25,7 +25,7 @@ const Home = () => {
         <WorkingExperience />
         <Education />
         <PublicPackage />
-        <Attention />
+        <Hobbies />
       </div>
 
       <CurrentVersion hidden />

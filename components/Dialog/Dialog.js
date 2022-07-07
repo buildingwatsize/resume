@@ -8,7 +8,7 @@ const Dialog = ({
 }) => {
   return (
     <div
-      className="fixed hidden inset-0 bg-dark-blue bg-opacity-70 overflow-y-auto h-full w-full z-10"
+      className="fixed hidden inset-0 bg-dark-blue bg-opacity-70 overflow-y-auto h-full w-full z-50"
       style={{ display: visible ? "block" : "none" }}
     >
       {loading ?

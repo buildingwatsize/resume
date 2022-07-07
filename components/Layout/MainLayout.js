@@ -10,7 +10,7 @@ const BLOB_NUMBER_MINIMAL = 6
 const BLOB_NUMBER_DEFAULT = 24
 const MainLayout = ({ children, className = '', bgMinimal = false }) => {
   return (
-    <div className={ClassCombiner("bg-primary text-white flex flex-col min-h-screen h-auto overflow-y-auto relative", className)}>
+    <div className={ClassCombiner("bg-primary text-white flex flex-col min-h-screen h-auto relative", className)}>
       <Background shape="blob" number={bgMinimal ? BLOB_NUMBER_MINIMAL : BLOB_NUMBER_DEFAULT} />
       <Header />
       <Navbar />

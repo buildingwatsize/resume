@@ -54,7 +54,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="mx-10 px-6 rounded-b-md">
+    <nav className="mx-10 px-6 rounded-b-md sticky top-0">
       <div className="flex justify-between items-center mx-auto px-2 md:px-0">
         <Link href="/">
           <div className="flex items-center cursor-pointer">

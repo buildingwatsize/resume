@@ -1,7 +1,5 @@
 import Personalities from 'components/Contents/Hobbies/Personalities'
 import SpotifyPlaylist from 'components/Contents/Hobbies/SpotifyPlaylist'
-import Col from 'components/Flex/Col'
-import Row from 'components/Flex/Row'
 import TopicLayout from 'components/Layout/TopicLayout'
 
 const Hobbies = () => {
@@ -10,14 +8,14 @@ const Hobbies = () => {
   const playlistURL = "https://open.spotify.com/embed/playlist/4QQCfuOzaIgxctmKXhA8KT?utm_source=generator" // Watsize's Liked Songs
   return (
     <TopicLayout id="hobbies" title='What we are the same?'>
-      <Row className="w-full">
-        <Col span={12} sm={6}>
-          <SpotifyPlaylist url={playlistURL} />
-        </Col>
-        <Col span={12} sm={6}>
+      <div className="w-full flex justify-between gap-4 flex-col lg:flex-row lg:w-4/5">
+        <div className="w-full min-h-[50vh] lg:w-1/2">
+          <SpotifyPlaylist url={playlistURL} hidden />
+        </div>
+        <div className="w-full lg:w-1/2">
           <Personalities />
-        </Col>
-      </Row>
+        </div>
+      </div>
     </TopicLayout>
   )
 }

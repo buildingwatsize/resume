@@ -10,7 +10,7 @@ const Hobbies = () => {
     <TopicLayout id="hobbies" title='What we are the same?'>
       <div className="w-full flex justify-between gap-4 flex-col lg:flex-row lg:w-4/5">
         <div className="w-full min-h-[50vh] lg:w-1/2">
-          <SpotifyPlaylist url={playlistURL} hidden />
+          <SpotifyPlaylist url={playlistURL} />
         </div>
         <div className="w-full lg:w-1/2">
           <Personalities />

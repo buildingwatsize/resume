@@ -14,7 +14,7 @@ const Icon = ({ width, height, src }) => {
       <div id="img-2" className="absolute top-0 right-0 bottom-0 flex justify-center items-center opacity-60">
         <Image src={ImageBg2} />
       </div>
-      <div id="img-3" className="absolute top-0 right-0 bottom-0 flex justify-center items-center max-w-[200px]">
+      <div id="img-3" className="absolute top-0 right-0 bottom-0 flex justify-center items-center max-w-[200px] hover:scale-110 ease-in-out duration-200">
         <Image src={src} height={200} />
       </div>
     </div>

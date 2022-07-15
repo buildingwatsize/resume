@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
-import { cloneElement, useState } from "react"
+import { cloneElement, useEffect, useState } from "react"
 
 import Alert from "components/Alert/Alert"
 import Button from "components/Button/Button"
@@ -11,6 +11,7 @@ const ClickAndGo = ({ link, children }) => {
   if (!(!!link)) return null
 
   const router = useRouter()
+  const [mounted, setMounted] = useState(false)
   const [visible, setVisible] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -29,6 +30,14 @@ const ClickAndGo = ({ link, children }) => {
     onClick: handleClick,
   })
 
+  useEffect(() => {
+    setMounted(true)
+    return () => {
+      setMounted(false)
+    }
+  }, [])
+
+  if (!mounted) return null
   return (
     <>
       {Wrapped}
@@ -37,7 +46,10 @@ const ClickAndGo = ({ link, children }) => {
           <Alert
             icon={<InfoIcon />}
             title="ไปยังเว็บไซต์ภายนอก?"
-            content={`กดปุ่ม "ยืนยัน" เพื่อจะเปิดเว็บไซต์ภายนอก`}
+            content={<div className="break-words">
+              <div className="text-base text-white/80">กดปุ่ม "ยืนยัน" เพื่อจะเปิดเว็บไซต์ภายนอก</div>
+              <span className="text-xs text-white/40">({link})</span>
+            </div>}
             action={
               <div className="flex items-center justify-center gap-4 py-2" >
                 <Button type="secondary" onClick={handleClickCancelDialog}>ยกเลิก</Button>

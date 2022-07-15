@@ -42,7 +42,10 @@ const Donate = () => {
       renderDialog: (onCancel, onOk) => <Alert
         icon={<InfoIcon />}
         title="ไปยังเว็บไซต์ภายนอก?"
-        content={`กดปุ่ม "ยืนยัน" เพื่อจะเปิดเว็บไซต์ภายนอก`}
+        content={<div>
+          <div className="text-base text-white/80">กดปุ่ม "ยืนยัน" เพื่อจะเปิดเว็บไซต์ภายนอก</div>
+          <span className="text-xs text-white/40">(https://www.buymeacoffee.com/watsize)</span>
+        </div>}
         action={
           <div className="flex items-center justify-center gap-4 py-2" >
             <Button type="secondary" onClick={onCancel}>ยกเลิก</Button>

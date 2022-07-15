@@ -26,10 +26,10 @@ const Footer = () => {
         </svg>
       </div>
       <div className='h-24 w-full flex flex-shrink-0 items-center justify-around -mt-6 px-4 md:px-0'>
-        <div>Made with ❤️ by <span className="text-white/60"><Link href={'https://github.com/buildingwatsize'}>Watsize</Link></span></div>
+        <div>Made with ❤️ by <span className="text-white/60 hover:text-white/80"><Link href={'https://github.com/buildingwatsize'}>Watsize</Link></span></div>
         <div className='flexJustifyCenter gap-2'>
           <div className='flexJustifySpaceBetween gap-1'>
-            {socialUrl.map(url => <SocialIcon key={url} style={iconSize} fgColor={iconForegroundColor} url={url} />)}
+            {socialUrl.map(url => <SocialIcon key={url} style={iconSize} fgColor={iconForegroundColor} url={url} className="opacity-90 hover:opacity-100" />)}
           </div>
         </div>
       </div>

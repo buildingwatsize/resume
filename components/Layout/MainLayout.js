@@ -14,7 +14,7 @@ const MainLayout = ({ children, className = '', bgMinimal = false }) => {
       <Background shape="blob" number={bgMinimal ? BLOB_NUMBER_MINIMAL : BLOB_NUMBER_DEFAULT} />
       <Header />
       <Navbar />
-      <Content className="z-10">
+      <Content className="z-50">
         {children}
       </Content>
       <Footer />

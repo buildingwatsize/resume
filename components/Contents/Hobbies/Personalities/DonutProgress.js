@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const DonutProgress = ({ title, description, color, percentage }) => {
   return <div
-    className="h-full w-[8em] p-4 flex flex-col justify-between rounded-md text-center shadow-md"
+    className="h-full w-[8em] p-4 flex flex-col justify-between rounded-md text-center shadow-md opacity-90 hover:opacity-100"
     style={{ backgroundColor: color }}
   >
     <div className="mb-4 font-bold text-sm">{title}</div>

@@ -41,7 +41,7 @@ const BuddhistOrdination = () => {
 
   const setup = (p5, canvasParentRef) => {
     clientWidth = canvasParentRef.parentElement.clientWidth
-    clientHeight = canvasParentRef.parentElement.clientHeight
+    clientHeight = canvasParentRef.parentElement.clientHeight + 100
 
     p5.createCanvas(clientWidth, clientHeight).parent(canvasParentRef)
     p5.imageMode(p5.CENTER)
@@ -73,7 +73,7 @@ const BuddhistOrdination = () => {
 
   return (
     // Will only render on client-side
-    <Sketch preload={preload} setup={setup} draw={draw} className="bg-white" />
+    <Sketch preload={preload} setup={setup} draw={draw} className="bg-white flex justify-center items-center" />
   )
 }
 

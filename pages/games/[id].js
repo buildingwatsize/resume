@@ -30,9 +30,9 @@ const GamesID = () => {
   return (
     <MainLayout bgMinimal>
       {!_.isEmpty(matched) ?
-        <div key={`gamesId-${id}`} className="flex-auto">
+        <div key={`gamesId-${id}`} className="flex-grow touch-none flex flex-col">
           <PageTitle title={`Games / ${matched.title}`} subtitle={matched.description} allowBack />
-          <div className="h-full overflow-hidden touch-none">
+          <div className="flex flex-auto">
             {matched.component}
           </div>
         </div>

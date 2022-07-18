@@ -85,7 +85,8 @@ const DrawingParticles = () => {
   let previous;
 
   const setup = (p5, canvasParentRef) => {
-    let cnv = p5.createCanvas(canvasParentRef.parentElement.clientWidth, canvasParentRef.parentElement.clientHeight).parent(canvasParentRef)
+    const offset = 100
+    let cnv = p5.createCanvas(canvasParentRef.parentElement.clientWidth, canvasParentRef.parentElement.clientHeight + offset).parent(canvasParentRef)
 
     current = p5.createVector(0, 0);
     previous = p5.createVector(0, 0);

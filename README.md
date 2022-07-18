@@ -13,7 +13,9 @@ To showcase my talent, I worked dedicated and with passion to construct this web
   - [📝 Table of contents](#-table-of-contents)
   - [📚 Build with](#-build-with)
   - [✨ Features](#-features)
+  - [🔗 Website Link](#-website-link)
   - [🏷 Versions](#-versions)
+    - [[v1.0.1] - `2022-07-18`](#v101---2022-07-18)
     - [[v1.0.0] - `2022-07-18`](#v100---2022-07-18)
   - [🙏 Thanks](#-thanks)
     - [💎 a lot of ICONs](#-a-lot-of-icons)
@@ -31,7 +33,17 @@ To showcase my talent, I worked dedicated and with passion to construct this web
 - ✅ Games
 - ✅ Donate
 
+## 🔗 Website Link
+
+[http://resume-watsize.vercel.app/](http://resume-watsize.vercel.app/)
+
 ## 🏷 Versions
+
+### [v1.0.1] - `2022-07-18`
+
+- Fixed bug on z-index on tag nav
+- Added website link on `README.md`
+- Edited broken link on `CHANGELOG.md`
 
 ### [v1.0.0] - `2022-07-18`
 

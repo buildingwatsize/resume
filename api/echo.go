@@ -11,7 +11,10 @@ import (
 )
 
 func init() {
-	viper.SetConfigFile(".env")
+	viper.AddConfigPath("./_env")
+	viper.SetConfigName("env")
+	viper.SetConfigType("json")
+
 	viper.AutomaticEnv()
 	err := viper.ReadInConfig()
 	if err != nil {
@@ -31,23 +34,31 @@ func EchoAPI(c *fiber.Ctx) error {
 	config := newConfiguration()
 	log.Printf("%+v\n", config)
 	return c.JSON(fiber.Map{
-		"spotifyGetSavedTracksURL":     config.spotifyGetSavedTracksURL,
-		"spotifyAddTrackToPlaylistURL": config.spotifyAddTrackToPlaylistURL,
+		"spotifyGetSavedTracksMethod":     config.spotifyGetSavedTracksMethod,
+		"spotifyGetSavedTracksURL":        config.spotifyGetSavedTracksURL,
+		"spotifyAddTrackToPlaylistMethod": config.spotifyAddTrackToPlaylistMethod,
+		"spotifyAddTrackToPlaylistURL":    config.spotifyAddTrackToPlaylistURL,
 	})
 }
 
 type configuration struct {
-	spotifyGetSavedTracksURL     string
-	spotifyAddTrackToPlaylistURL string
+	spotifyGetSavedTracksMethod     string
+	spotifyGetSavedTracksURL        string
+	spotifyAddTrackToPlaylistMethod string
+	spotifyAddTrackToPlaylistURL    string
 }
 
 func newConfiguration() configuration {
+	getSavedTracksMethod := viper.GetString("SPOTIFY_GET_SAVED_TRACKS_METHOD")
 	getSavedTracksEndpoint := viper.GetString("SPOTIFY_GET_SAVED_TRACKS_ENDPOINT")
+	addTrackToPlaylistMethod := viper.GetString("SPOTIFY_ADD_TRACK_TO_PLAYLIST_METHOD")
 	addTrackToPlaylistEndpoint := viper.GetString("SPOTIFY_ADD_TRACK_TO_PLAYLIST_ENDPOINT")
 	targetPlaylistID := viper.GetString("SPOTIFY_TARGET_PLAYLIST_ID")
 
 	return configuration{
-		spotifyGetSavedTracksURL:     getSavedTracksEndpoint,
-		spotifyAddTrackToPlaylistURL: fmt.Sprintf(addTrackToPlaylistEndpoint, targetPlaylistID),
+		spotifyGetSavedTracksMethod:     getSavedTracksMethod,
+		spotifyGetSavedTracksURL:        getSavedTracksEndpoint,
+		spotifyAddTrackToPlaylistMethod: addTrackToPlaylistMethod,
+		spotifyAddTrackToPlaylistURL:    fmt.Sprintf(addTrackToPlaylistEndpoint, targetPlaylistID),
 	}
 }

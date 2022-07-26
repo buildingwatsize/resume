@@ -1,9 +1,10 @@
 package handler
 
 import (
-	"fmt"
 	"log"
 	"net/http"
+
+	"watsize-page-api/config"
 
 	"github.com/gofiber/adaptor/v2"
 	"github.com/gofiber/fiber/v2"
@@ -31,34 +32,13 @@ func EchoAPI(c *fiber.Ctx) error {
 
 	log.Println("Reached: Echo API")
 
-	config := newConfiguration()
-	log.Printf("%+v\n", config)
+	conf := config.NewConfiguration()
+	log.Printf("%+v\n", conf)
 	return c.JSON(fiber.Map{
-		"spotifyGetSavedTracksMethod":     config.spotifyGetSavedTracksMethod,
-		"spotifyGetSavedTracksURL":        config.spotifyGetSavedTracksURL,
-		"spotifyAddTrackToPlaylistMethod": config.spotifyAddTrackToPlaylistMethod,
-		"spotifyAddTrackToPlaylistURL":    config.spotifyAddTrackToPlaylistURL,
+		"SpotifyGetSavedTracksMethod":     conf.SpotifyGetSavedTracksMethod,
+		"SpotifyGetSavedTracksURL":        conf.SpotifyGetSavedTracksURL,
+		"SpotifyAddTrackToPlaylistMethod": conf.SpotifyAddTrackToPlaylistMethod,
+		"SpotifyAddTrackToPlaylistURL":    conf.SpotifyAddTrackToPlaylistURL,
+		"SpotifyOAuthToken":               conf.SpotifyOAuthToken[0:3] + "XXX" + conf.SpotifyOAuthToken[len(conf.SpotifyOAuthToken)-3:],
 	})
-}
-
-type configuration struct {
-	spotifyGetSavedTracksMethod     string
-	spotifyGetSavedTracksURL        string
-	spotifyAddTrackToPlaylistMethod string
-	spotifyAddTrackToPlaylistURL    string
-}
-
-func newConfiguration() configuration {
-	getSavedTracksMethod := viper.GetString("SPOTIFY_GET_SAVED_TRACKS_METHOD")
-	getSavedTracksEndpoint := viper.GetString("SPOTIFY_GET_SAVED_TRACKS_ENDPOINT")
-	addTrackToPlaylistMethod := viper.GetString("SPOTIFY_ADD_TRACK_TO_PLAYLIST_METHOD")
-	addTrackToPlaylistEndpoint := viper.GetString("SPOTIFY_ADD_TRACK_TO_PLAYLIST_ENDPOINT")
-	targetPlaylistID := viper.GetString("SPOTIFY_TARGET_PLAYLIST_ID")
-
-	return configuration{
-		spotifyGetSavedTracksMethod:     getSavedTracksMethod,
-		spotifyGetSavedTracksURL:        getSavedTracksEndpoint,
-		spotifyAddTrackToPlaylistMethod: addTrackToPlaylistMethod,
-		spotifyAddTrackToPlaylistURL:    fmt.Sprintf(addTrackToPlaylistEndpoint, targetPlaylistID),
-	}
 }

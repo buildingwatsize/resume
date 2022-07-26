@@ -21,10 +21,12 @@ func HealthHandler(w http.ResponseWriter, r *http.Request) {
 func healthAPI(c *fiber.Ctx) error {
 	c.Response().Header.Set(fiber.HeaderContentType, fiber.MIMEApplicationJSONCharsetUTF8)
 	log.Println("Reached: Health Check API")
-	return c.JSON(fiber.Map{
+	resp := fiber.Map{
 		"name":      "watsize-page-api",
 		"version":   "0.1.0",
 		"status":    "healthy",
 		"timestamp": time.Now(),
-	})
+	}
+	log.Println(resp)
+	return c.JSON(resp)
 }

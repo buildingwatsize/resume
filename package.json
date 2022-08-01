@@ -1,7 +1,7 @@
 {
   "name": "watsize",
-  "version": "1.0.0",
-  "description": "updated: 2022-07-15",
+  "version": "1.0.2",
+  "description": "updated: 2022-08-01",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.0.2] - `2022-08-01`
+
+- Edited education timeline
+- Added TODO for API
+
 ## [v1.0.1] - `2022-07-18`
 
 - Fixed bug on z-index on tag nav
@@ -10,5 +15,6 @@
 
 - Launched on first time with 3 features: cv, games, and donate
 
+[v1.0.2]: https://github.com/buildingwatsize/resume/releases/tag/v1.0.2
 [v1.0.1]: https://github.com/buildingwatsize/resume/releases/tag/v1.0.1
 [v1.0.0]: https://github.com/buildingwatsize/resume/releases/tag/v1.0.0

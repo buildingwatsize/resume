@@ -11,7 +11,7 @@ const Education = () => {
         <Timeline list={[
           {
             key: "education-1",
-            time: "Dec 2013 - Feb 2017",
+            time: "Jun 2013 - Jun 2017",
             position: "Computer Engineering",
             location: "KMUTNB",
             image: KMUTNBImage,
@@ -37,7 +37,7 @@ const Education = () => {
           },
           {
             key: "education-2",
-            time: "Oct 2012 - Apr 2014",
+            time: "Oct 2012 - Apr 2013",
             position: "Computer Olympic Camp (POSN)",
             location: "Naresuan University",
             image: POSNImage,

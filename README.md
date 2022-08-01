@@ -15,6 +15,7 @@ To showcase my talent, I worked dedicated and with passion to construct this web
   - [✨ Features](#-features)
   - [🔗 Website Link](#-website-link)
   - [🏷 Versions](#-versions)
+    - [[v1.0.3] - `2022-08-01`](#v103---2022-08-01)
     - [[v1.0.2] - `2022-08-01`](#v102---2022-08-01)
     - [[v1.0.1] - `2022-07-18`](#v101---2022-07-18)
     - [[v1.0.0] - `2022-07-18`](#v100---2022-07-18)
@@ -39,6 +40,10 @@ To showcase my talent, I worked dedicated and with passion to construct this web
 [http://resume-watsize.vercel.app/](http://resume-watsize.vercel.app/)
 
 ## 🏷 Versions
+
+### [v1.0.3] - `2022-08-01`
+
+- Added Resume pdf version by downloadable link path
 
 ### [v1.0.2] - `2022-08-01`
 

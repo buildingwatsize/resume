@@ -15,6 +15,7 @@ To showcase my talent, I worked dedicated and with passion to construct this web
   - [✨ Features](#-features)
   - [🔗 Website Link](#-website-link)
   - [🏷 Versions](#-versions)
+    - [[v1.0.4] - `2022-08-02`](#v104---2022-08-02)
     - [[v1.0.3] - `2022-08-01`](#v103---2022-08-01)
     - [[v1.0.2] - `2022-08-01`](#v102---2022-08-01)
     - [[v1.0.1] - `2022-07-18`](#v101---2022-07-18)
@@ -40,6 +41,10 @@ To showcase my talent, I worked dedicated and with passion to construct this web
 [http://resume-watsize.vercel.app/](http://resume-watsize.vercel.app/)
 
 ## 🏷 Versions
+
+### [v1.0.4] - `2022-08-02`
+
+- Removed API function serverless for temporary
 
 ### [v1.0.3] - `2022-08-01`
 

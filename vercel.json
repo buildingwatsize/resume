@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/**/*.go": {
-      "includeFiles": "_env/**"
-    }
-  },
   "regions": [
     "sin1"
   ]

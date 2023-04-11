@@ -1,19 +1,12 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-const defaults = {
-  title: 'Watsize Pages',
-}
-
-const Header = (props = defaults) => {
-  const {
-    title
-  } = props
+const Header = ({ title = "Watsize Pages" }) => {
   return (
     <Head>
       <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

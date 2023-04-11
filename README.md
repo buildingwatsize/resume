@@ -15,11 +15,12 @@ To showcase my talent, I worked dedicated and with passion to construct this web
   - [✨ Features](#-features)
   - [🔗 Website Link](#-website-link)
   - [🏷 Versions](#-versions)
-    - [[v1.0.4] - `2022-08-02`](#v104---2022-08-02)
-    - [[v1.0.3] - `2022-08-01`](#v103---2022-08-01)
-    - [[v1.0.2] - `2022-08-01`](#v102---2022-08-01)
-    - [[v1.0.1] - `2022-07-18`](#v101---2022-07-18)
-    - [[v1.0.0] - `2022-07-18`](#v100---2022-07-18)
+    - [\[v1.1.0\] - `2023-04-11`](#v110---2023-04-11)
+    - [\[v1.0.4\] - `2022-08-02`](#v104---2022-08-02)
+    - [\[v1.0.3\] - `2022-08-01`](#v103---2022-08-01)
+    - [\[v1.0.2\] - `2022-08-01`](#v102---2022-08-01)
+    - [\[v1.0.1\] - `2022-07-18`](#v101---2022-07-18)
+    - [\[v1.0.0\] - `2022-07-18`](#v100---2022-07-18)
   - [🙏 Thanks](#-thanks)
     - [💎 a lot of ICONs](#-a-lot-of-icons)
     - [🤔 a lot of IDEAs](#-a-lot-of-ideas)
@@ -41,6 +42,13 @@ To showcase my talent, I worked dedicated and with passion to construct this web
 [http://resume-watsize.vercel.app/](http://resume-watsize.vercel.app/)
 
 ## 🏷 Versions
+
+### [v1.1.0] - `2023-04-11`
+
+- Upgraded dependencies
+- Fixed warning affected on newer dependencies
+- Added Vercel Analytics
+- Added gitignore for yarn PnP
 
 ### [v1.0.4] - `2022-08-02`
 

@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
 
 # testing
 /coverage
@@ -30,3 +30,5 @@ yarn-error.log*
 .env.production.local
 
 **/tmp/**
+
+.yarn/*

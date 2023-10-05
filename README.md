@@ -15,8 +15,8 @@ To showcase my talent, I worked dedicated and with passion to construct this web
   - [✨ Features](#-features)
   - [🔗 Website Link](#-website-link)
   - [🏷 Versions](#-versions)
+    - [\[v1.3.0\] - `2023-10-05`](#v130---2023-10-05)
     - [\[v1.2.0\] - `2023-10-03`](#v120---2023-10-03)
-    - [\[v1.1.0\] - `2023-04-11`](#v110---2023-04-11)
   - [🙏 Thanks](#-thanks)
     - [💎 a lot of ICONs](#-a-lot-of-icons)
     - [🤔 a lot of IDEAs](#-a-lot-of-ideas)
@@ -39,19 +39,17 @@ To showcase my talent, I worked dedicated and with passion to construct this web
 
 ## 🏷 Versions
 
+### [v1.3.0] - `2023-10-05`
+
+- Moved payment via Omise as a menu in donate page
+- Refactor some constant
+
 ### [v1.2.0] - `2023-10-03`
 
 - Added Payment & API [beta]
 - Integrated w/ Omise
 - Improved Layout Rendering
 - Removed deprecated package
-
-### [v1.1.0] - `2023-04-11`
-
-- Upgraded dependencies
-- Fixed warning affected on newer dependencies
-- Added Vercel Analytics
-- Added gitignore for yarn PnP
 
 [more...](/CHANGELOG.md)
 

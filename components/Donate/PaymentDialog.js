@@ -4,8 +4,6 @@ import Axios from "utils/axios.service";
 
 import Button from "components/Button/Button";
 import Row from "components/Flex/Row";
-import MainLayout from "components/Layout/MainLayout";
-import PageTitle from "components/Layout/PageTitle";
 import {
   API_PATH,
   MINIMUM_AMOUNT,
@@ -34,12 +32,12 @@ const withOmise = (Component) => {
   };
 };
 
-const PaymentPage = ({ omise, loading }) => {
+const PaymentDialog = ({ omise, loading, onCancel }) => {
   const [processing, setProcessing] = useState(false);
   const [amount, setAmount] = useState(null);
 
   const handleClick = () => {
-    if (!(amount >= MINIMUM_AMOUNT)) {
+    if (!amount || amount < MINIMUM_AMOUNT * 1) {
       alert(minimumAmountDescription);
       return;
     }
@@ -65,6 +63,12 @@ const PaymentPage = ({ omise, loading }) => {
     });
   };
 
+  const handleClickCancel = () => {
+    setProcessing(false);
+    setAmount(null);
+    if (onCancel) onCancel();
+  };
+
   const onSuccess = async (nonce, paymentInfo) => {
     let payload = { description: "resume-payment-flow", ...paymentInfo };
     if (nonce.startsWith("tokn_")) {
@@ -85,49 +89,49 @@ const PaymentPage = ({ omise, loading }) => {
   };
 
   return (
-    <MainLayout bgMinimal>
-      <PageTitle title={"Payment"} subtitle={"ชำระเงิน"} />
-      <Row className={"mx-6 flex justify-center"}>
-        <div className="flex flex-col w-[350px] bg-bold-blue/40 p-8 rounded-md">
-          <div className="mb-6 bg-danger/70 text-center rounded-md">
-            BETA TEST
-          </div>
-          <div className="mb-8">
-            <div className="text-lg mb-2">ช่องทางชำระเงินที่รองรับ:</div>
-            <div className="text-white/70">
-              {PAYMENT_METHOD_LABEL_LIST.join(", ")}
-            </div>
-          </div>
-          <div className="mb-8">
-            <div className="text-lg">ยอดเงิน (THB)</div>
-            <NumericFormat
-              value={amount}
-              onValueChange={({ value }) => {
-                setAmount(value);
-              }}
-              thousandSeparator=","
-              allowNegative={false}
-              decimalScale={2}
-              fixedDecimalScale={true}
-              placeholder="Input a number"
-              customInput={Input}
-            />
-            <div className="text-sm text-white/70 p-1">
-              ({minimumAmountDescription})
-            </div>
-          </div>
-          <div className="text-end">
-            <Button
-              onClick={handleClick}
-              disabled={loading || processing}
-              className="w-full"
-            >
-              สร้างรายการ
-            </Button>
+    <Row className={"mx-6 flex justify-center"}>
+      <div className="flex flex-col w-[30%] min-w-[350px] bg-bold-blue/40 p-8 rounded-md">
+        <div className="mb-6 bg-danger/70 text-center rounded-md">
+          BETA TEST
+        </div>
+        <div className="mb-8">
+          <div className="text-lg mb-2">ช่องทางชำระเงินที่รองรับ:</div>
+          <div className="text-white/70">
+            {PAYMENT_METHOD_LABEL_LIST.join(", ")}
           </div>
         </div>
-      </Row>
-    </MainLayout>
+        <div className="mb-8">
+          <div className="text-lg">ยอดเงิน (THB)</div>
+          <NumericFormat
+            value={amount}
+            onValueChange={({ value }) => {
+              setAmount(value);
+            }}
+            thousandSeparator=","
+            allowNegative={false}
+            decimalScale={2}
+            fixedDecimalScale={true}
+            placeholder={MINIMUM_AMOUNT}
+            customInput={Input}
+          />
+          <div className="text-sm text-white/70 p-1">
+            ({minimumAmountDescription})
+          </div>
+        </div>
+        <div className="flex justify-between gap-6 items-center">
+          <div onClick={handleClickCancel} className="underline cursor-pointer">
+            ยกเลิก
+          </div>
+          <Button
+            onClick={handleClick}
+            disabled={loading || processing}
+            className="w-full"
+          >
+            สร้างรายการ
+          </Button>
+        </div>
+      </div>
+    </Row>
   );
 };
 
@@ -157,4 +161,4 @@ const Input = ({
   );
 };
 
-export default withOmise(PaymentPage);
+export default withOmise(PaymentDialog);

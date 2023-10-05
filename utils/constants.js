@@ -2,7 +2,7 @@ export const API_PATH = {
   CHARGE: "/api/charge",
 };
 
-export const MINIMUM_AMOUNT = 20;
+export const MINIMUM_AMOUNT = Number(20).toFixed(2);
 export const PAYMENT_METHOD_AVAILABLE = [
   { key: "credit_card", label: "บัตรเครดิต" },
   { key: "installment", label: "ผ่อนชำระ" },

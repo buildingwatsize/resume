@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.4.0] - `2024-04-10`
+
+- Updated dependencies
+- Updated latest information
+- Refactored some part of code
+
 ## [v1.3.0] - `2023-10-05`
 
 - Moved payment via Omise as a menu in donate page
@@ -42,6 +48,7 @@
 
 - Launched on first time with 3 features: cv, games, and donate
 
+[v1.4.0]: https://github.com/buildingwatsize/resume/releases/tag/v1.4.0
 [v1.3.0]: https://github.com/buildingwatsize/resume/releases/tag/v1.3.0
 [v1.2.0]: https://github.com/buildingwatsize/resume/releases/tag/v1.2.0
 [v1.1.0]: https://github.com/buildingwatsize/resume/releases/tag/v1.1.0
